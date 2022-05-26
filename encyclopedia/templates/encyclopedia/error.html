@@ -1,0 +1,12 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+Error
+{% endblock %}
+
+{% block body %}
+<h1>Error: {{ message }}</h1>
+
+<a href="{% url 'wiki:index' %}">Return to Home Page</a>
+
+{% endblock %}

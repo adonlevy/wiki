@@ -1,0 +1,15 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+Matches
+{% endblock %}
+
+{% block body %}
+<h1>Pages you might be looking for related to "{{ query }}"</h1>
+
+{% for match in matches %}
+<li><a href="/{{ match }}">{{ match }}</a></li>
+{% empty %}
+<li>No matches within Wiki</li>
+{% endfor %}
+{% endblock %}
